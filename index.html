@@ -5,8 +5,100 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Il mio test</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <h1>Un saluto</h1>
+    <script>
+    h1 = document.querySelector("h1");
+    console.log(h1);
+    console.dir(h1);
+    h1.style.color = 'red';
+    h1.style.backgroundColor = 'blue';
+    </script>
+    <script>
+    // --------------------------------------------
+    // ----- DOM  ---------------------------------
+    // --------------------------------------------
+    console.dir(document);
+  /*
+    // --------------------------------------------
+    // ----- OGGETTI PROPRIETA' E METODI ----------
+    // --------------------------------------------
+    auto = {
+        marca : 'Alfa Romeo',
+        modello : 'Mito',
+        prezzo : 25000,
+        propritari : [
+            {nome : 'Antonio', anno : 2010},
+            {nome : 'Francesco', anno : 2012},
+            {nome : 'Alessandro', anno : 2016}
+        ],
+        viaggio : function(dest){
+            console.log("Da Bari a " + dest);
+        },
+        cerca : function(chi){
+            trova = this.propritari.filter( (el) => el.nome == chi);
+            console.log(trova);
+            console.log(chi + " ha comprato nel " + trova[0].anno);
+        },
+        aggiungi : function (chi, quando){
+            this.propritari.push( {nome : chi, anno : quando} );
+        },
+        elimina : function (chi){
+            restanti = this.propritari.filter( (el) => el.nome != chi);
+            this.propritari = restanti;
+        },
+        cambia : function (chi, quando){
+            trova = this.propritari.filter( (el) => el.nome == chi);
+            trova[0].anno = quando;
+        },
+
+    }
+    console.log(auto);
+    auto.viaggio("Napoli");
+    auto.cerca("Francesco");
+    auto.elimina("Antonio");
+    auto.aggiungi("Barbara", 2019);
+    auto.cambia("Alessandro", 1999);
+    console.log(auto.marca);
+    console.log(auto.propritari[1].nome);
+    console.log(auto.propritari[1].anno);
+    auto.colore = 'nero';               // aggiunata una proprietà
+    auto.propritari.push( {nome : 'Alessia', anno : 2021});
+    auto.vendita = () => {              // aggiunta di un metodo
+        console.log('Passare dal notaio');
+    }
+    console.log(Object.entries(auto));
+    console.log(Object.keys(auto));
+    console.log(Object.values(auto));
+    // --------------------------------------------
+    // ----- ARRAY DI NUMERI CASUALI --------------
+    // ------ REDUCE ------------------------------
+    // --------------------------------------------
+        min = 1;
+        max = 90;
+        a = [];
+        b = [];
+        for (i=0; i<10; i++){
+            a.push(Math.floor(Math.random()* (max-min) + min));
+            b.push(Math.floor(Math.random()* (max-min) + min));
+            console.log(a);
+            console.log(b);
+        }
+        console.log(somma(a, b));
+        totale = a.reduce( (acc, el) => acc+el );
+        console.log(totale);
+
+        function somma(arr1, arr2)
+        {
+            arr3 = [];
+            for (i=0; i<10; i++){
+                arr3[i] = arr1[i] + arr2[i];
+            }
+            return arr3;
+        }
+    */
+    </script>
 </body>
 </html>
